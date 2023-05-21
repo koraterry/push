@@ -1,0 +1,12 @@
+function generateFibonacciSequence(length) {
+  let sequence = [0, 1];
+  for (let i = 2; i < length; i++) {
+    let nextNumber = sequence[i - 1] + sequence[i - 2];
+    sequence.push(nextNumber);
+  }
+  return sequence;
+}
+
+let sequenceLength = 10;
+let fibonacciSequence = generateFibonacciSequence(sequenceLength);
+console.log("Fibonacci sequence:", fibonacciSequence);
